@@ -122,10 +122,10 @@ public class Practica {
 		
 		
 		//Siempre el primer valor sera la fila y el siguiente la columna
-		int matriz [][] = new int [3][3];
+		//int matriz [][] = new int [3][3];
 		
 		//asignacion manual
-		matriz[0][0] = 5;
+		/*matriz[0][0] = 5;
 		matriz[0][1] = 13;
 		matriz[0][2] = 96;
 		matriz[1][0] = 35;
@@ -133,7 +133,21 @@ public class Practica {
 		matriz[1][2] = 71;
 		matriz[2][0] = 446;
 		matriz[2][1] = 228;
-		matriz[2][2] = 24;
+		matriz[2][2] = 24;*/
+		
+		
+		// for para cargar valores al vector
+		
+		//Scanner teclado = new Scanner( System.in);
+		
+
+		
+		/*for(int f =0;f <3;f++){
+			for(int c = 0;c<3;c++){
+				System.out.println("Ingrese el valor de la posicion f: "+ f +" c: "+ c);
+				matriz[f][c] = teclado.nextInt();
+			}
+		}
 		
 		//recorrido de vector con filas y columnas
 		
@@ -142,7 +156,56 @@ public class Practica {
 				System.out.println("El valor de la posicion f: "+f+" c: "+c);
 				System.out.println("es de: "+matriz[f][c]);
 			}
+		}*/
+		
+		// ******ejercicio vector, donde ingresas 15 num y cuentas cuantas veces se ingreso el num 3
+		
+		
+		/* int vector []= new int [5];
+		Scanner teclado = new Scanner(System.in);
+		
+		int tres = 0;
+		
+		for(int i = 0;i<vector.length;i++){
+			System.out.println("ingrese el un numero: ");
+			vector[i]=teclado.nextInt();
 		}
+		
+		for(int t = 0;t<vector.length;t++){
+			if(vector[t] == 3){
+				tres = tres + 1;
+			}
+		}
+		
+		System.out.println("Se conto el numero tres estas veces "+ tres ); */
+		
+		//*****Ejercicio matriz 
+		
+		Double matriz [][] = new Double [4][4];
+		Scanner teclado = new Scanner( System.in );
+		Double suma = 0.0;
+		
+		
+		for(int f = 0;f<4;f++){
+			for(int c = 0;c<3;c++){
+				System.out.println("\nIngrese la nota del alumno");
+				matriz[f][c] = teclado.nextDouble();
+				//System.out.println("ingresaste datos en la f:"+f+" c: "+c);
+				suma = suma + matriz[f][c];
+			}
+			matriz[f][3]= suma / 3;
+			System.out.println("el promedio del alumno n "+f+" es de "+matriz[f][3]);
+			suma = 0.0;
+		}
+		
+		for(int f = 0;f<4;f++){
+			System.out.println("Las notas del alumno n "+f+" son: ");
+			for(int c = 0;c<3;c++){
+				System.out.println("Nota N "+ c + " "+matriz[f][c]);
+			}
+		System.out.println("El promedio de las notas es: "+ matriz[f][3]);
+		}		
+		
 	}
 	
 	
